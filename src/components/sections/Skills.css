@@ -1,0 +1,96 @@
+.skills__tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.skills__tab {
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+.skills__tab:hover {
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+}
+.skills__tab.active {
+  background: var(--accent-gradient);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 18px;
+}
+
+.skills__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 28px 16px;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, var(--skill-color, #6366f1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  border-radius: inherit;
+}
+.skills__card:hover::before {
+  opacity: 0.07;
+}
+
+.skills__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition);
+}
+.skills__card:hover .skills__icon-wrap {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-accent);
+  transform: scale(1.08);
+}
+
+.skills__name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  transition: color var(--transition-fast);
+  font-family: "JetBrains Mono", monospace;
+}
+.skills__card:hover .skills__name {
+  color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+  .skills__grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+  }
+}

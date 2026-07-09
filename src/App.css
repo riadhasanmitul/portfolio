@@ -1,0 +1,11 @@
+/* App-level layout: ensure main fills between fixed nav and footer */
+main {
+  min-height: 100vh;
+}
+
+/* Alternating section backgrounds for visual rhythm */
+#about  { background: var(--bg-secondary); }
+#skills { background: var(--bg-primary); }
+#projects { background: var(--bg-secondary); }
+#timeline { background: var(--bg-primary); }
+#contact  { background: var(--bg-secondary); }
