@@ -6,9 +6,8 @@ import {
   SiReact, SiHtml5, SiCss,
   SiNodedotjs, SiExpress, SiJsonwebtokens,
   SiPostgresql, SiMysql,
-  SiGit, SiLinux, SiRaspberrypi, SiScikitlearn,
+  SiGit, SiLinux, SiRaspberrypi, SiScikitlearn,SiFirebase,SiMongodb
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
 import "./Skills.css";
 
 const ICON_MAP = {
@@ -16,8 +15,7 @@ const ICON_MAP = {
   SiReact, SiHtml5, SiCss,
   SiNodedotjs, SiExpress, SiJsonwebtokens,
   SiPostgresql, SiMysql,
-  SiGit, SiLinux, SiRaspberrypi, SiScikitlearn,
-  FaJava,
+  SiGit, SiLinux, SiRaspberrypi, SiScikitlearn,SiFirebase,SiMongodb
 };
 
 export default function Skills() {

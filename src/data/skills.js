@@ -6,7 +6,6 @@ export const skillCategories = [
       { name: "JavaScript", icon: "SiJavascript", color: "#f7df1e" },
       { name: "TypeScript", icon: "SiTypescript", color: "#3178c6" },
       { name: "Python", icon: "SiPython", color: "#3776ab" },
-      { name: "Java", icon: "FaJava", color: "#ed8b00" },
       { name: "C++", icon: "SiCplusplus", color: "#00599c" },
     ],
   },
@@ -35,6 +34,8 @@ export const skillCategories = [
     skills: [
       { name: "PostgreSQL", icon: "SiPostgresql", color: "#336791" },
       { name: "MySQL", icon: "SiMysql", color: "#4479a1" },
+      { name: "Firebase", icon: "SiFirebase", color: "#f15400" },
+      { name: "Mongodb", icon: "SiMongodb", color: "#00f148" },
     ],
   },
   {

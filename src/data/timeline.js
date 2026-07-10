@@ -4,9 +4,9 @@ export const timelineEntries = [
     type: "education",
     title: "B.Sc. in Computer Science & Engineering",
     organization: "Bangladesh University of Business and Technology (BUBT)",
-    period: "2021 — 2025 (Expected)",
+    period: "2022 — 2026",
     description:
-      "Final-year CSE student with a strong foundation in Data Structures, Algorithms, OOP, DBMS, Operating Systems, Computer Networks, and Software Design Principles.",
+      "CSE graduate student with a strong foundation in Data Structures, Algorithms, OOP, DBMS, Operating Systems, Computer Networks, and Software Design Principles.",
     highlights: [
       "Core curriculum: DSA, OOP, DBMS, OS, Computer Networks, Software Engineering",
       "Completed academic projects in full-stack development, IoT, and machine learning",
@@ -16,32 +16,18 @@ export const timelineEntries = [
   },
   {
     id: 2,
-    type: "project",
-    title: "BDNCart — Full-Stack E-Commerce Platform",
-    organization: "Academic Project",
-    period: "2024",
+    type: "education",
+    title: "Diploma in Engineering (Telecommunication)",
+    organization: "Jessore Polytechnic Institute",
+    period: "2018 — 2022",
     description:
-      "Designed and built a production-grade e-commerce platform using React, TypeScript, Node.js, Express, PostgreSQL, and Docker — applying software engineering best practices throughout.",
+      "Completed a Diploma in Telecommunication Engineering with a strong foundation in networking, telecommunications, electronics, and communication systems. Gained practical experience through laboratory work, technical projects, and an industrial internship at Bangladesh Telecommunications Company Limited (BTCL).",
     highlights: [
-      "End-to-end TypeScript across frontend and backend",
-      "Containerized with Docker Compose for portable deployment",
-      "Implemented JWT auth, role-based access, and admin dashboard",
+      "Studied computer networking and communication technologies",
+      "Learned network fundamentals, routing, switching, and transmission systems",
+      "Completed hands-on laboratory work on telecommunication equipment",
+      "Industrial internship at Bangladesh Telecommunications Company Limited (BTCL)",
     ],
-    icon: "code",
-  },
-  {
-    id: 3,
-    type: "project",
-    title: "IoT & ML Academic Projects",
-    organization: "Academic Projects — BUBT",
-    period: "2023 — 2024",
-    description:
-      "Developed CropSense (IoT smart agriculture monitoring system) and StudyLens (ML academic performance predictor) as part of coursework and independent study.",
-    highlights: [
-      "CropSense: Python + MQTT sensor pipeline with real-time React dashboard",
-      "StudyLens: scikit-learn ML pipeline with 87% prediction accuracy",
-      "Gained practical experience in data preprocessing and model evaluation",
-    ],
-    icon: "star",
+    icon: "graduation",
   },
 ];

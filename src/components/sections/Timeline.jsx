@@ -61,7 +61,7 @@ export default function Timeline() {
           className={`section-header ${header.isVisible ? "reveal visible" : "reveal"}`}
         >
           <span className="section-tag">My Journey</span>
-          <h2 className="section-title">Education & Experience</h2>
+          <h2 className="section-title">Education</h2>
           <p className="section-subtitle">
             The milestones and experiences that shaped my engineering mindset.
           </p>
