@@ -8,7 +8,7 @@ const ROLES = [
   "Backend Engineer",
   "React Developer",
   "Problem Solver",
-  "CS Final-Year Student",
+  "CS Graduate Student",
 ];
 
 const SOCIALS = [
@@ -61,7 +61,7 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="hero__tagline">
-          Final-year CS&amp;E student at <strong>BUBT</strong> passionate about building{" "}
+          CSE Graduate student from <strong>BUBT</strong> passionate about building{" "}
           <strong>scalable, maintainable software</strong> and solving real-world problems
           through clean, efficient code.
         </p>

@@ -53,7 +53,7 @@ export default function About() {
         >
           <div className="about__bio-text">
             <p>
-              I'm a <strong>final-year Computer Science & Engineering student</strong> with a
+              I'm a <strong>Graduate Computer Science & Engineering student</strong> with a
               strong foundation in Data Structures, Algorithms, OOP, DBMS, Operating Systems,
               Computer Networks, and Software Design Principles.
             </p>
