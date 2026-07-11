@@ -259,7 +259,7 @@ export default function Chatbot() {
       </button>
 
       {/* ── Chat Panel ── */}
-      <div className={`chatbot__panel glass-card ${open ? "chatbot__panel--open" : ""}`}>
+      <div className={`chatbot__panel ${open ? "chatbot__panel--open" : ""}`}>
         {/* Header */}
         <div className="chatbot__header">
           <div className="chatbot__header-info">
