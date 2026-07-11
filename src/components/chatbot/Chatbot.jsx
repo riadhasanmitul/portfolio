@@ -150,11 +150,7 @@ async function callWithFallback(apiKey, history, userMessage) {
 
 // ── Component ─────────────────────────────────────────────────────────────
 export default function Chatbot() {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-
-  // No key configured → render nothing (no error shown to visitors)
-  if (!apiKey) return null;
-
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "";
   return <ChatbotWidget apiKey={apiKey} />;
 }
 
@@ -193,6 +189,19 @@ function ChatbotWidget({ apiKey }) {
     setLoading(true);
 
     try {
+      if (!apiKey) {
+        setMessages((prev) => [
+          ...prev,
+          {
+            role: "bot",
+            text: "🤖 AI chat is not configured yet. In the meantime, feel free to reach out to Riad directly at **riadhcsebd@gmail.com** or connect on **LinkedIn**!",
+            id: Date.now() + 1,
+          },
+        ]);
+        setLoading(false);
+        return;
+      }
+
       const { text: reply, assistantMsg } = await callWithFallback(
         apiKey,
         historyRef.current,
