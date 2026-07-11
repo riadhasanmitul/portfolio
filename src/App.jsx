@@ -1,4 +1,5 @@
 import "./App.css";
+import Chatbot from "./components/chatbot/Chatbot";
 import ScrollProgress from "./components/layout/ScrollProgress";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -25,6 +26,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
     </>
   );
 }
