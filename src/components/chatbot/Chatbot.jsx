@@ -150,6 +150,15 @@ async function callWithFallback(apiKey, history, userMessage) {
 
 // ── Component ─────────────────────────────────────────────────────────────
 export default function Chatbot() {
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+  // No key configured → render nothing (no error shown to visitors)
+  if (!apiKey) return null;
+
+  return <ChatbotWidget apiKey={apiKey} />;
+}
+
+function ChatbotWidget({ apiKey }) {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
@@ -164,8 +173,6 @@ export default function Chatbot() {
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
-
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
   // Auto-scroll
   useEffect(() => {
@@ -186,9 +193,7 @@ export default function Chatbot() {
     setLoading(true);
 
     try {
-      if (!apiKey) throw new Error("VITE_GEMINI_API_KEY is not set in .env.local");
-
-      const { text: reply, assistantMsg, model } = await callWithFallback(
+      const { text: reply, assistantMsg } = await callWithFallback(
         apiKey,
         historyRef.current,
         trimmed
