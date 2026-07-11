@@ -74,6 +74,7 @@
   justify-content: center;
   overflow: hidden;
   backdrop-filter: blur(20px);
+  box-shadow: 0 8px 40px rgba(99, 102, 241, 0.18);
 }
 .about__avatar-initials {
   font-size: 5rem;
@@ -84,6 +85,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
 }
 .about__avatar-ring {
   position: absolute;
@@ -96,6 +98,11 @@
 @keyframes ringPulse {
   0%, 100% { opacity: 0.4; transform: scale(1); }
   50% { opacity: 0.15; transform: scale(1.03); }
+}
+
+/* Mobile name plate shown only on small screens */
+.about__avatar-name {
+  display: none;
 }
 
 /* Passion cards */
@@ -142,10 +149,44 @@
   .about__passions { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  .about__bio-wrap { grid-template-columns: 1fr; gap: 36px; }
-  .about__avatar-wrap { width: 160px; height: 160px; }
+  .about__bio-wrap {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 36px;
+    /* Put avatar row first */
+    direction: ltr;
+  }
+  .about__avatar-wrap {
+    /* Center avatar on mobile, reorder above text */
+    order: -1;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+  .about__avatar {
+    border-radius: 28px;
+  }
+  .about__avatar-ring {
+    border-radius: 34px;
+  }
+  .about__avatar-name {
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: var(--accent-gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.01em;
+  }
   .about__competency-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 580px) {
   .about__passions { grid-template-columns: 1fr; }
+  .about__avatar-wrap {
+    width: 200px;
+    height: 200px;
+  }
 }

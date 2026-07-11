@@ -90,12 +90,14 @@ export default function About() {
             </div>
           </div>
 
-          {/* Avatar placeholder */}
+          {/* Avatar */}
           <div className="about__avatar-wrap">
             <div className="about__avatar">
               <img src="/avatar.png" alt="Md Riad Hasan" />
             </div>
             <div className="about__avatar-ring" />
+            {/* Shown only on mobile below the photo */}
+            <p className="about__avatar-name">Md Riad Hasan</p>
           </div>
         </div>
 
