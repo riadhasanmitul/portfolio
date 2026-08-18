@@ -4,10 +4,9 @@ import { useTypewriter } from "../../hooks/useTypewriter";
 import "./Hero.css";
 
 const ROLES = [
+  "Problem Solver",
   "Full-Stack Developer",
   "Backend Engineer",
-  "React Developer",
-  "Problem Solver",
   "CS Graduate Student",
 ];
 
